@@ -87,7 +87,6 @@ class Disco
   # Gets the headers and posts payload to API
   def post_payload
     headers = get_headers(@payload)
-    puts @payload.to_json
     @result = HTTParty.post("#{@api_base}#{@api_path}", :body => @payload.to_json, :headers => headers )
     p @result
   end
